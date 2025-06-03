@@ -21,7 +21,7 @@ Sigue estos pasos para correr la aplicación localmente:
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-proyecto.git
+   git clone <url- del repositorio>
    cd nombre-del-proyecto
  2.	Instalar dependencias:
     
