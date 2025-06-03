@@ -11,7 +11,7 @@ import {
     Alert,
     message
 } from 'antd';
-import { SaveOutlined, CloseOutlined, CheckCircleOutlined, ExclamationCircleOutlined, UserOutlined, BookOutlined } from '@ant-design/icons';
+import { SaveOutlined, CloseOutlined, CheckCircleOutlined, UserOutlined, BookOutlined } from '@ant-design/icons';
 
 import type { Author } from "../../services/authorService"
 
@@ -79,31 +79,16 @@ const AuthorForm: React.FC<AuthorFormProps> = ({ open, onClose, onSubmit, author
         } catch (error) {
             console.error("Error submitting form:", error);
 
-            // Mostrar mensaje de error (múltiples opciones)
 
-            // Opción 1: Message flotante
             message.error({
                 content: `Error al ${author ? 'actualizar' : 'crear'} el autor`,
                 duration: 4,
                 style: { marginTop: '20vh' }
             });
 
-            // Opción 2: Notification
-            notification.error({
-                message: 'Error al guardar',
-                description: `Ha ocurrido un error al ${author ? 'actualizar' : 'crear'} el autor. Por favor, inténtalo de nuevo.`,
-                placement: 'topRight',
-                duration: 5,
-                icon: <ExclamationCircleOutlined style={{ color: '#ff4d4f' }} />
-            });
 
-            // Opción 3: Alert dentro del modal
-            setAlertInfo({
-                show: true,
-                type: 'error',
-                message: 'Error al guardar el autor',
-                description: 'Ha ocurrido un problema. Por favor, verifica los datos e inténtalo nuevamente.'
-            });
+
+
         } finally {
             setLoading(false);
         }
