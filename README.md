@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# Prueba Técnica - Frontend en React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una solución frontend desarrollada con *React* y *Vite* 
+## 🧰 Tecnologías utilizadas
 
-Currently, two official plugins are available:
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/) 
+- [React Router](https://reactrouter.com/) 
+- [Ant Design](https://ant.design/) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Configuración de la conexión a la API
 
-## Expanding the ESLint configuration
+La URL base de la API está definida en el archivo services/api.ts.
+Si en algún momento cambia la dirección de la API, puedes actualizarla directamente en ese archivo para que toda la aplicación utilice la nueva ruta.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Instalación y ejecución
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Sigue estos pasos para correr la aplicación localmente:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clonar el repositorio:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   git clone https://github.com/tu-usuario/nombre-del-proyecto.git
+   cd nombre-del-proyecto
+ 2.	Instalar dependencias:
+    
+     	npm install
+3. Ejecutar servidor de desarrollo:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+       npm run dev
+por defecto la aplicacion se iniciara en: 
+
+    http://localhost:3000
+    
+Si el puerto 3000 está ocupado, Vite usará el siguiente disponible automáticamente.
+
+🧪 Scripts disponibles
+	•	npm run dev – Inicia la aplicación en modo desarrollo.
+	•	npm run build – Construye la aplicación para producción.
+
+
+ 
+     
